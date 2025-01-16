@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="container text-center food_box">
+        <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
+            <div class="col">
+              <div class="p-3">
+                  <h2>Bucket</h2>
+                  <a href="/dunkin">
+                      <img src="{% static 'images/chimken.png' %}">
+                  </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="p-3">
+                  <h2>Sandwich</h2>
+                  <a href="/tsisqvili">
+                      <img src="{% static 'images/sandwich.png' %}">
+                  </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="p-3">
+                  <h2>Family meal</h2>
+                  <a href="/wendy">
+                      <img src="{% static 'images/family.png' %}">
+                  </a>
+              </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
