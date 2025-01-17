@@ -1,6 +1,26 @@
 {% extends "index.html" %}
-
+{% load static %}
 
 {% block content %}
-sdfgsdgfsdg
+    <form method="POST" style="padding:250px">
+    <h1>no account? <a href="/reg">register</a></h1>
+<!--        {% for i in messages %}-->
+<!--        {{ i }}-->
+<!--        {% endfor %}-->
+        {% csrf_token %}
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Username</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" name="username">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 {% endblock %}

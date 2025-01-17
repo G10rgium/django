@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'django_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'glovo_project',
+        'NAME': 'django',
         'USER': 'root',
         'PASSWORD': 'Suqulu2890',
         'HOST': '127.0.0.1',

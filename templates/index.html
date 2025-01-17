@@ -54,7 +54,11 @@
             </div>
             <div class="col-md-4 offset-md-4">
                 <a href="/log_in">
+                    {% if log.is_authenticated %}
+                    <h1>{{ log.username }}</h1>
+                    {% else %}
                     <h1>Log in</h1>
+                    {% endif %}
                 </a>
             </div>
         </div>
