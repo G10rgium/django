@@ -34,12 +34,7 @@ def dunkin(request):
     return render(request, "dunkin.html")
 
 
-
-def logout_view(request):
-    logout(request)
-
 def reg(request):
-
     if request.method == "POST":
         email = request.POST.get("email")
         username = request.POST.get("username")
@@ -67,16 +62,18 @@ def log_in(request):
             messages.info(request, "username ar aris shemoyvanili")
         elif password == "":
             messages.info(request, "paroli ar aris shemoyvanili")
-        elif password != "password" or username != "username":
-            messages.info(request, "arasworia")
         else:
             log = auth.authenticate(username=username, password=password)
             print(log)
             if log is not None:
                 auth.login(request, log)
                 return redirect("index")
+            # else:
+            #     auth.logout(request)
+            #     return redirect("index")
     return render(request, "log_in.html")
 
+# def log_out(request):
 
 
 
